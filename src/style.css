@@ -1,0 +1,60 @@
+@import "reveal.js/reveal.css";
+@import "reveal.js/theme/black.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+    --accent-color: #38bdf8; /* Ein helles Blau */
+    --bg-dark: #0f172a;
+}
+
+.reveal {
+    background-color: var(--bg-dark);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Titel-Folie */
+.title-slide {
+    text-align: left !important;
+    border-left: 8px solid var(--accent-color);
+    padding-left: 40px !important;
+}
+
+.reveal h1 {
+    color: var(--accent-color);
+    font-weight: 700;
+    text-transform: none;
+}
+
+.reveal h2.slide-header {
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+/* Container für GeoGebra */
+.ggb-container {
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid #334155;
+    background-color: white;
+    display: block;
+    max-width: 100%;
+}
+
+/* Listen-Design */
+.reveal ul {
+    list-style: none;
+    margin-top: 30px;
+}
+
+.reveal ul li::before {
+    content: "→";
+    color: var(--accent-color);
+    margin-right: 15px;
+    font-weight: bold;
+}

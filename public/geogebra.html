@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>GeoGebra Applet</title>
+    <style>
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background-color: transparent; }
+        #ggb-element { width: 100%; height: 100%; }
+    </style>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+</head>
+<body>
+    <div id="ggb-element"></div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const fileName = urlParams.get('file');
+
+        if (fileName) {
+            const applet = new GGBApplet({
+                "appName": "classic",
+                "width": window.innerWidth,
+                "height": window.innerHeight,
+                "filename": fileName,
+                "showToolBar": false,
+                "showAlgebraInput": false,
+                "perspective": "G",
+                "showKeyboardOnFocus": false,
+                "language": "de",
+                "scaleContainerClass": "ggb-element",
+                "allowUpscale": true
+            }, true);
+            applet.inject('ggb-element');
+        }
+    </script>
+</body>
+</html>
