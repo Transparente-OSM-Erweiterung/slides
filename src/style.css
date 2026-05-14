@@ -9,8 +9,20 @@
 }
 
 .reveal {
-    background-color: var(--bg-dark);
     font-family: 'Poppins', sans-serif;
+    background: transparent !important;
+}
+
+body {
+    background-color: var(--bg-dark) !important;
+    background-image: url('/bg-map.png') !important;
+    background-repeat: repeat !important;
+    background-position: var(--bg-x, 0px) var(--bg-y, 0px) !important;
+    transition: background-position 1s cubic-bezier(0.25, 0.1, 0.25, 1) !important;
+}
+
+.reveal .slide-background {
+    background: transparent !important;
 }
 
 /* Titel-Folie */
@@ -40,7 +52,7 @@
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    border: 1px solid #334155;
+    border: 2px solid #334155;
     background-color: white;
     display: block;
     max-width: 100%;
