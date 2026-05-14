@@ -12,3 +12,20 @@ deck.initialize({
   preloadIframes: true,
   pdfMaxPagesPerSlide: 1
 });
+
+deck.on('slidechanged', event => {
+  const iframes = event.currentSlide.querySelectorAll('iframe');
+  iframes.forEach(iframe => {
+    try {
+      // Versuche, die SVG-Animation zurückzusetzen, falls die Iframe-Quelle denselben Ursprung hat
+      if (iframe.contentDocument) {
+        const svg = iframe.contentDocument.querySelector('svg');
+        if (svg && typeof svg.setCurrentTime === 'function') {
+          svg.setCurrentTime(4);
+        }
+      }
+    } catch (e) {
+      // Ignoriere Cross-Origin-Fehler bei externen Iframes (wie Google Maps)
+    }
+  });
+});

@@ -2,7 +2,7 @@
 <html lang="de">
   <head>
     <meta charset="utf-8">
-    <title>Interaktive Mathe-Präsentation</title>
+    <title>Studienarbeit Präsentation</title>
     <script src="https://www.geogebra.org/apps/deployggb.js"></script>
   </head>
   <body>
@@ -11,26 +11,92 @@
 
         <section class="title-slide">
           <h1>Optimierte transparente Erweiterung der OSM für Fuß- und Radwege</h1>
-          <p>Studienarbeit</p>
+          <p>Studienarbeit Präsentation</p>
         </section>
 
         <section>
-          <h2>Sample Folie</h2>
+          <h2>Problemstellung</h2>
           <ul>
-            <li>Text: <span style="color: #22c55e;">Text</span></li>
-            <li>Text: <span style="color: #22c55e;">Text</span></li>
-            <li>Text: <span style="color: #38bdf8;">Text</span></li>
+            <li>
+              Dedizierte <b>Routenfindung</b> für <b>Fußgänger</b> und <b>Radfahrer</b> ermöglichen
+            </li>
           </ul>
         </section>
 
         <section>
-          <h2>Konstruktion 1:</h2>
-          <iframe class="ggb-container" data-preload data-src="/geogebra.html?file=konstruktion1.ggb" width="1400" height="800" frameborder="0"></iframe>
+          <h2>Aktuelle Situation</h2>
+          <iframe class="content-container"
+                  data-preload
+                  data-src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d282.1773195332888!2d8.386147957460587!3d49.01245292897555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x479706508f790955%3A0x6ba7b951b59d896!2sEuropaplatz%2C%2076133%20Karlsruhe!3m2!1d49.009942099999996!2d8.3946948!4m5!1s0x47970706c04191d7%3A0x625d232c4ae77fc2!2sDHBW%20Karlsruhe%2C%20Erzbergerstra%C3%9Fe%20121%2C%2076133%20Karlsruhe!3m2!1d49.026597599999995!2d8.385259!5e1!3m2!1sde!2sde!4v1778583391712!5m2!1sde!2sde"
+                  width="1400"
+                  height="800"
+                  style="border:0;"
+                  allowfullscreen=""
+                  referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </section>
 
         <section>
-          <h2>Konstruktion 2:</h2>
-          <iframe class="ggb-container" data-preload data-src="/geogebra.html?file=konstruktion2.ggb" width="1400" height="800" frameborder="0"></iframe>
+          <h2>Aktuelle Situation</h2>
+          <ul>
+            <li>Routing meist auf Fahrzeuge ausgelegt</li>
+            <li>teilweise keine Gehweg-Knoten in Karten</li>
+            <li>Routing auf Straßen</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Lösungsansatz</h2>
+          <div class="content-container" style="width: 1400px; height: 800px; display: flex; justify-content: center; align-items: center;">
+            <img src="/osm-fields.png" alt="Felder der OSM" style="max-width: 100%; max-height: 100%; object-fit: contain;transform: scale(1.45);">
+          </div>
+        </section>
+
+        <section>
+          <h2>Erweiterter Graph</h2>
+          <iframe class="content-container" data-preload data-src="/graph.svg" width="1400" height="800" frameborder="0"></iframe>
+        </section>
+
+        <section>
+          <h2>Positionsberechnung</h2>
+          <iframe class="content-container" data-preload data-src="/geogebra.html?file=konstruktion1.ggb" width="1400" height="800" frameborder="0"></iframe>
+        </section>
+
+        <section>
+          <h2>Singularitätsfehler</h2>
+          <iframe class="content-container" data-preload data-src="/geogebra.html?file=konstruktion2.ggb" width="1400" height="800" frameborder="0"></iframe>
+        </section>
+
+        <section>
+          <h2>Rückläufigkeitsfehler</h2>
+          <div class="content-container" style="width: 1400px; height: 800px;">
+            <img src="/crossover.png" alt="Überschneidungsfehler" style="width: 100%; height: 100%; object-fit: cover; object-position: center; transform: scale(1.3);">
+          </div>
+        </section>
+
+        <section>
+          <h2>Rückläufigkeitsfehler</h2>
+          <iframe class="content-container" data-preload data-src="/geogebra.html?file=konstruktion3.ggb" width="1400" height="800" frameborder="0"></iframe>
+        </section>
+
+        <section>
+          <h2>Verschiebung auf den Schnittpunkt</h2>
+          <iframe class="content-container" data-preload data-src="/schnittpunkt.svg" width="1400" height="800" frameborder="0"></iframe>
+        </section>
+
+        <section>
+          <h2>Routing Service</h2>
+          <iframe class="content-container"
+                  data-preload
+                  data-src="http://localhost:4200/"
+                  width="1400"
+                  height="800"
+                  style="border:0;"
+          ></iframe>
+        </section>
+
+        <section>
+          <h2>Danke</h2>
         </section>
 
       </div>

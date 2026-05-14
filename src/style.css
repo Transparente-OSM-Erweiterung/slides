@@ -35,7 +35,7 @@
 }
 
 /* Container für GeoGebra */
-.ggb-container {
+.content-container {
     margin: 0 auto;
     border-radius: 12px;
     overflow: hidden;
